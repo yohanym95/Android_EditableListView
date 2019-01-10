@@ -1,6 +1,7 @@
 package com.example.yohan.editabletextview;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,12 +9,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.sql.SQLException;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText etname,etage,ettelno,etcity;
     Button btnAdd,btnView;
+
+    private DatabaseReference mDatabase;
 
 
     @Override
@@ -28,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnAdd = findViewById(R.id.btnadd);
         btnView = findViewById(R.id.btnview);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
 
 
@@ -49,6 +59,22 @@ public class MainActivity extends AppCompatActivity {
         String age = etage.getText().toString();
         String telNo = ettelno.getText().toString();
         String city = etcity.getText().toString();
+
+        HashMap<String,String> dataMap = new HashMap<>();
+        dataMap.put("Name",name);
+        dataMap.put("Age",age);
+        dataMap.put("Tel No",telNo);
+        dataMap.put("City", city);
+
+        mDatabase.push().setValue(dataMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+                if(task.isSuccessful()){
+
+                }
+            }
+        });
 
         try{
 

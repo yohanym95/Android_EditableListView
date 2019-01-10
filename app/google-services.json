@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1065936074681",
+    "firebase_url": "https://editabletextview.firebaseio.com",
+    "project_id": "editabletextview",
+    "storage_bucket": "editabletextview.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065936074681:android:4b4fb614b56599d4",
+        "android_client_info": {
+          "package_name": "com.example.yohan.editabletextview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065936074681-ng4qb4100a1dithukbnrp22ttkm7gs06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yohan.editabletextview",
+            "certificate_hash": "c8ecebae5146180543311a2191d105a80eda9509"
+          }
+        },
+        {
+          "client_id": "1065936074681-6ec9vv5gtcca4laebc8v8fe4n3sokmra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjJs4nA2tJr2FaqfYQ8RGwf0bN0NOPHhI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065936074681-6ec9vv5gtcca4laebc8v8fe4n3sokmra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
